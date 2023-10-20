@@ -4,6 +4,10 @@ Create your virtual environment with `venv` and touch `.env` in the project root
 
 `export FLASK_APP=app.py`
 
+`export JWT_SECRET_KEY=<jwt-secret-key>`
+
+you can generate a secret key on the command line using `openssl rand -base64 32`. You will also need to use this value manually in the `Authorize` section of the Swagger UI to test this API
+
 run the flask app from within your virtualenvironment, for example with a virtualenvironment named `venv` run:
 
 `source venv/bin/activate`
