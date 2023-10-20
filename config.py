@@ -9,4 +9,3 @@ load_dotenv(path.join(basedir, '.env'))
 
 APP_TITLE = os.environ.get('APP_TITLE')
 GENHEALTH_API_KEY = os.environ.get('GENHEALTH_API_KEY')
-JWT_SECRET_KEY = os.environ.get('JWT_SECRET_KEY')
