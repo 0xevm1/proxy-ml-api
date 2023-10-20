@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, redirect, url_for
 from flasgger import Swagger
 from api.route.info import info_api
 from api.route.inference import inference_api
@@ -64,7 +64,13 @@ def create_app():
     app.register_blueprint(info_api, url_prefix='/api')
     app.register_blueprint(inference_api, url_prefix='/api/inference')
 
+    @app.route('/')
+    def root():
+        return redirect(url_for('flasgger.apidocs')) 
+
     return app
+
+
 
 if __name__ == '__main__':
     from argparse import ArgumentParser
