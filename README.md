@@ -1,5 +1,7 @@
 ### Proxy API
 
+![UI Demo](https://github.com/0xevm1/proxy-ml-api/blob/main/api-screenshot.png?raw=true)
+
 Create your virtual environment with `venv` and touch `.env` in the project root to set the environment variable to run `app.py`
 
 `export FLASK_APP=app.py`
