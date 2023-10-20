@@ -6,7 +6,7 @@ Create your virtual environment with `venv` and touch `.env` in the project root
 
 `export JWT_SECRET_KEY=<jwt-secret-key>`
 
-you can generate a secret key on the command line using `openssl rand -base64 32`. You will also need to use this value manually in the `Authorize` section of the Swagger UI to test this API
+you can generate a secret key on the command line using `openssl rand -base64 32`
 
 run the flask app from within your virtualenvironment, for example with a virtualenvironment named `venv` run:
 
@@ -14,20 +14,22 @@ run the flask app from within your virtualenvironment, for example with a virtua
 
 then run with `python -m flask run`
 
+In the Swagger UI that loads, many of the API endpoints are protected
+
+Use the /login route with `username` john `password` password123, and upon successful response copy the value from the `accessToken` key, without any quotes.
+
+Then at the top of the UI, click Authorize, and type `Bearer` and after a space paste your copied accessToken. This will allow the inference api to respond
+
 
 =====
 
 ### Assessment - MVP choices 
 
-✅ = prioritized and implemented 
-
-🗒️ = deemed premature 
-
-⚠️ = partially implemented or tied to something implemented
+✅ = prioritized and implemented || 🗒️ = deemed premature  || ⚠️ = partially implemented or tied to something implemented
 
 ✅ Rate Limiting: rate limiting at the proxy level to protect your microservice. "200 per day", "50 per hour"
 
-⚠️ Logging & Monitoring: Implementing logging and monitoring at the proxy level can help diagnose issues, understand usage patterns, and monitor the health of both the proxy and the microservice. Additional logging framework is not implemented, because there is sufficient information coming from the API framework to the console. For scalability, an external logging can be used, which is a factor of the deployment compute instance used, such as AWS Cloudwatch
+⚠️ Logging & Monitoring: Implementing logging and monitoring at the proxy level can help diagnose issues, understand usage patterns, and monitor the health of both the proxy and the microservice. Additional logging framework is not implemented, because there is sufficient information coming from the API framework to the console. For scalability, an external logging can be used, which is a factor of the deployment compute instance used, such as AWS Cloudwatch, or Heroku
 
 ⚠️ Security - Additional security should be done at the compute instance level. Such as enforcing HTTPS, SSL and TLS. If deployed this would be inherited.
 
@@ -45,7 +47,7 @@ then run with `python -m flask run`
 
 🗒️ Caching - premature optimization
 
-🔁 Deployment - a github pages or vercel deployment is certainly possible, and it will enforce SSL/TLS
+✅  Deployment - deployed to Heroku at https://still-wave-11774-7cc43877f1f6.herokuapp.com/ and it will enforce SSL/TLS
 
 ✅ Documentation - via comments, README and Swagger UI
 
