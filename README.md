@@ -1,4 +1,4 @@
-###Proxy API
+### Proxy API
 
 Create your virtual environment with `venv` and touch `.env` in the project root to set the environment variable to run `app.py`
 
@@ -16,9 +16,13 @@ then run with `python -m flask run`
 
 
 =====
-###Assessment - MVP choices. 
+
+### Assessment - MVP choices 
+
 ✅ = prioritized and implemented 
+
 🗒️ = deemed premature 
+
 ⚠️ = partially implemented or tied to something implemented
 
 ✅ Rate Limiting: rate limiting at the proxy level to protect your microservice. "200 per day", "50 per hour"
