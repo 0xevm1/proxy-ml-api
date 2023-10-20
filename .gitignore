@@ -31,3 +31,4 @@ dist/
 .env
 Pipfile.lock
 *.sqlite3
+.vercel
