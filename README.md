@@ -49,7 +49,7 @@ Then at the top of the UI, click Authorize, and type `Bearer` and after a space 
 
 🗒️ Caching - premature optimization
 
-✅  Deployment - deployed to Heroku at https://still-wave-11774-7cc43877f1f6.herokuapp.com/ and it will enforce SSL/TLS
+✅  Deployment - was temporarily deployed to Heroku where it would enforce SSL/TLS
 
 ✅ Documentation - via comments, README and Swagger UI
 
